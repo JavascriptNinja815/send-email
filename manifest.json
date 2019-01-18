@@ -9,7 +9,6 @@
   },
   "author":"Krupp",
   "permissions": [
-    "storage",
     "tabs",
     "http://*/*",
     "https://*/*",

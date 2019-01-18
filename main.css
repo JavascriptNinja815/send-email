@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 3px;
+}
+label {
+  font-size: 15px;
+}
+input {
+  font-size: 15px;
+}
+h3 {
+  margin: 0px;
+}
+.send_email {
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send Email</title>
+  <link rel="stylesheet" href="main.css">
+  <script type="application/javascript" src="popup.js"></script>
+  <!-- <script type="application/javascript" src="jquery-3.2.1.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+</head>
+<body style="width: 350px;">
+  <fieldset>
+    <legend><h3>SMTP Setting:</h3></legend>
+    <div class="item">
+      <label>Server Address:</label>
+      <input type="text" value="smtp.gmail.com">
+    </div>
+    <div class="item">
+        <label>Username:</label>
+        <input type="email" value="xandokan815@gmail.com">
+    </div>
+    <div class="item">
+      <label>Password:</label>
+      <input type="password" value="Superman815">
+    </div>
+    <div class="item">
+      <label>Port:</label>
+      <input type="number" value="587">
+    </div>
+  </fieldset>
+  <div id="sender_name" class="item">
+    <h3>Sender Name</h3>
+    <input type="text">
+  </div>
+  <div id="detect_for" class="item">
+    <h3>Div ID For Detect</h3>
+    <input type="text">
+  </div>
+  <div class="item">
+    <label>Detected Email:</label>
+    <input type="email" id="hidden_email" val="">
+  </div>
+  <div id="subject" class="item">
+    <h3>Subject</h3>
+    <input type="text">
+  </div>
+  <div id="send_email" class="send_email">
+    <button>Send Email</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "SendEmail",
+  "description": "Detect hidden input tag and send directly as HTML email",
+  "version":"1.0",
+  "background": {
+    "persistent": false,
+    "scripts": [ "event.js" ]
+  },
+  "author":"Krupp",
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "file:///*"
+  ],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_title": "SendEmail",
+    "default_popup": "popup.html"
+  }
+}

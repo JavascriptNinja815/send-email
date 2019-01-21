@@ -4,24 +4,23 @@
   <title>Send Email</title>
   <link rel="stylesheet" href="main.css">
   <script type="application/javascript" src="popup.js"></script>
-  <!-- <script type="application/javascript" src="jquery-3.2.1.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body style="width: 350px;">
-  <form>
+  <form id="send_email">
     <fieldset>
       <legend><h3>SMTP Setting:</h3></legend>
       <div class="item">
         <label>Server Address:</label>
-        <input type="text" value="smtp.gmail.com">
+        <input id="host" type="text" value="smtp.elasticemail.com" required>
       </div>
       <div class="item">
           <label>Username:</label>
-          <input type="email" value="xandokan815@gmail.com">
+          <input id="username" type="email" value="xandokan815@gmail.com" required>
       </div>
       <div class="item">
         <label>Password:</label>
-        <input type="password" value="Superman815">
+        <input id="password" type="password" value="2f966210-b4f0-4f2f-9d5c-cb21276f918b" required>
       </div>
       <div class="item">
         <label>Port:</label>
@@ -31,22 +30,22 @@
 
     <div class="item">
       <h3>Sender Name</h3>
-      <input type="text" id="sender_name">
+      <input type="email" id="sender" required>
     </div>
     <div class="item">
       <h3>Div ID For Detect</h3>
-      <input type="text" id="detect_for">
+      <input type="text" id="detect_for" required>
     </div>
     <div class="item">
       <label>Detected Email:</label>
-      <input type="email" id="detected_email" val="">
+      <input type="email" id="detected_email" val="" required>
     </div>
     <div class="item">
       <h3>Subject</h3>
-      <input type="text" id="subject">
+      <input type="text" id="subject" required>
     </div>
-    <div class="send_email">
-      <input id="send_email" type="submit" value="Send Email">
+    <div class="send_btn">
+      <input type="submit" value="Send Email">
     </div>
 </form>
 </body>

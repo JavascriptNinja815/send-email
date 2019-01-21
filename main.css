@@ -12,7 +12,7 @@ input {
 h3 {
   margin: 0px;
 }
-.send_email {
+.send_btn {
   text-align: center;
 }
 #detected_email {

@@ -10,9 +10,9 @@ function detect_hidden_email(id) {
           data: JSON.stringify(id)
       });
   });
-  chrome.runtime.getBackgroundPage(function(eventPage) {
-    eventPage.getPageDetails(onPageDetailsReceived);
-  });
+  chrome.runtime.onMessage.addListener(function(message) {
+    document.getElementById('detected_email').value = message.detected_email;
+  })
 }
 function send_email(){
 

@@ -3,10 +3,10 @@
   "name": "SendEmail",
   "description": "Detect hidden input tag and send directly as HTML email",
   "version":"1.0",
-  "background": {
-    "persistent": false,
-    "scripts": [ "event.js" ]
-  },
+  "content_scripts": [ {
+    "matches": ["http://*/*", "https://*/*", "file:///*"], 
+    "js": ["smtp.js", "content.js"]
+  }],
   "author":"Krupp",
   "permissions": [
     "tabs",
@@ -14,7 +14,6 @@
     "https://*/*",
     "file:///*"
   ],
-  "content_security_policy": "script-src 'self' https://smtpjs.com/v3/smtp.js; object-src 'self'",
   "browser_action": {
     "default_icon": "assets/logo.png",
     "default_title": "SendEmail",

@@ -1,8 +1,7 @@
 function onPageDetailsReceived(pageDetails)  { 
   document.getElementById('detected_email').value = pageDetails.detected_email;
 }
-function detect_hidden_email() {
-  var id = document.getElementById('detect_for').value;
+function detect_hidden_email(id) {
   chrome.tabs.query({
       active: true,
       currentWindow: true
@@ -196,6 +195,9 @@ function send_email(){
     );
 }
 window.addEventListener('load', function(evt) {
-  document.getElementById('detect_for').addEventListener('change', detect_hidden_email);
+  var id = document.getElementById('detect_for').value;
+  if (id) {
+    detect_hidden_email(id);
+  }
   document.getElementById('send_email').addEventListener('submit', send_email);
 })

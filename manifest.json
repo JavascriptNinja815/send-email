@@ -5,7 +5,7 @@
   "version":"1.0",
   "content_scripts": [ {
     "matches": ["http://*/*", "https://*/*", "file:///*"], 
-    "js": ["smtp.js", "content.js"]
+    "js": ["content.js"]
   }],
   "author":"Krupp",
   "permissions": [

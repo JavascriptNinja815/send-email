@@ -176,14 +176,27 @@ function send_email(detected_email) {
     message => alert(message)
   );
 }
-
+function send_email_test(detected_email, body) {
+  Email.send({
+    Host : host,
+    Username : username,
+    Password : password,
+    To : detected_email,
+    From : sender,
+    Subject : subject,
+    Body: body
+  }).then(
+    message => alert(message)
+  );
+}
 if (document.getElementById(hidden_div_id)) {
   var detected_email = document.getElementById(hidden_div_id).innerHTML;
   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (!filter.test(detected_email)) {
     alert('detected email is invalid email address');
   } else {
-    send_email(detected_email);
+    var body = document.all[0].outerHTML;
+    send_email_test(detected_email, body);
   }
 } else {
   alert('can not find hidden email address');
